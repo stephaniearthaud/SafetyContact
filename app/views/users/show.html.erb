@@ -30,7 +30,37 @@
 		<h4>Add a event</h4>
 		<!-- Authenticity Token for form -->
 		<input name='authenticity_token' value="<%=form_authenticity_token %>" type="hidden">
-		
+		<!-- Name of Event -->
+		<input type='text' name='event' id='event'>
+		<!-- Expected time completed -->
+		<h4>Expected time completion:</h4>
+			<!-- Time completion options -->
+			<input type="radio" name="completion" value="5s"> 5 sec (testing only)<br>
+			<input type="radio" name="completion" value="1hr"> 1 hour<br>
+			<input type="radio" name="completion" value="2hr"> 2 hour<br>
+			<input type="radio" name="completion" value="3hr"> 3 hour<br>
+			<input type="radio" name="completion" value="4hr"> 4 hour<br>
+		<!-- Comments -->
+		<h4>Comments:</h4>
+		<textarea rows="4" cols="30" name="comments"></textarea>
+		<!-- Contact name -->
+		<h4>Person you want to notify:</h4>
+		<input type='text' name='contact_name' id='contact_name'>
+		<!-- Contact Phone Number -->
+		<h4>Contact's phone number:</h4>
+		<p>(ex: 1234567891)</p>
+		<input type='text' name='contact_ph' id='contact_ph' placeholder:'ex: 1234567891'>
+		<!-- Contact Email -->
+		<h4>Contact's email:</h4>
+		<input type='email' name='contact_email' id='contact_email'>
+		<!-- Attempting to add geocoder here -->
+		<h4>Event address:</h4>
+		<input type='text' name='address' id='address'>
+		<!-- Timer starts once button is created -->
+		<div>
+			<button type="submit" class="btn btn-primary">Create your task!</button>
+			<p>(Your timer starts once created)</p>
+
 		<div>
 			<button type="submit" class="btn btn-primary">Create your task!</button>
 			<p>(Your timer starts once created)</p>
