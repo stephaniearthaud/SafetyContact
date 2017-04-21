@@ -2,13 +2,8 @@ class EventsController < ApplicationController
 
 	def create
 		# getting the expected time done, assign to 'completion' column
-		if params[:completion] == "5s"
-			comp_num = 5 #this is to test only
-			in5sec # call on this method to start the countdown
-
-		elsif params[:completion] == "1hr"
+		if params[:completion] == "1hr"
 			comp_num = 1
-			in1hr
 
 		elsif params[:completion] == "2hr"
 			comp_num = 2
@@ -69,7 +64,7 @@ class EventsController < ApplicationController
 			@client = Twilio::REST::Client.new account_sid, auth_token
 
 			@message = @client.account.messages.create({ :to => "+1"+"#{number}",
-														:from => "+18316090982",
+														:from => "+17023273890",
 														:body => "#{message}" })
 
 			# will be passing in conatct_email, contact_name, event, and current user to UserMailer
